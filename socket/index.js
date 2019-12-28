@@ -1,4 +1,10 @@
-import io from "socket.io-client";
+import io from "socket.io-client"
 
-const socket = io("http://192.168.137.1:3000")
+//configuration
+const url = "192.168.137.1"
+const port = 3000
+const serverbase = `http://${url}:${port}`
+
+const socket = io(serverbase)
+
 export { socket }
